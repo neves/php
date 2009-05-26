@@ -1,0 +1,53 @@
+html, body {
+margin: 0;
+padding: 0;
+border: none;
+height: 100%;
+}
+
+html, td {
+font-family: verdana;
+font-size: 12px;
+}
+
+#site {
+width: 780px;
+margin: auto;
+margin-top: 10px;
+background: #EEE;
+}
+
+#topo {
+height: 120px;
+}
+
+table.layout {
+border-collapse: collapse;
+width: 100%;
+}
+
+table.layout td{
+padding: 0;
+vertical-align: top;
+}
+
+#menu {
+background-color: #E7F6FD;
+width: 200px;
+}
+
+#rodape {
+padding: 10px;
+text-align: center;
+background-color: #FCFFBA;
+}
+
+#lateral {
+width: 140px;
+background-color: #E7F6FD;
+}
+
+#conteudo {
+background-color: #FDEBEB;
+padding: 10px;
+}
