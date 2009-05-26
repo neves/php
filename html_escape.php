@@ -7,8 +7,10 @@
  * <?php echo $sua_variavel_aqui ?>
  * utilize sempre da forma abaixo:
  * <?=h( $sua_variavel_aqui )?>
- * para testar, remove a funca h na linha 25 e digite o seguinte texto dentro do textarea:
+ * para testar, remove a funca h do html abaixo e digite o seguinte texto dentro do textarea:
  * </textarea>FORA DO TEXTAREA
+ * Sem a funcao h, ira ocorrer um html injection, onde a tag </textarea> ira fechar o textarea,
+ * e tudo que for digitado depois ficara fora da tag, permitindo ser inserido ate javascript!
  */
 function h($valor)
 {
