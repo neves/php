@@ -1,0 +1,11 @@
+Os arquivos do site devem pertencer ao cliente e o grupo deve ser www-data (no caso do Debian e Ubuntu).
+Como o PHP roda com o mesmo usuário do servidor de página, os arquivos precisam ser acessíveis à ele.
+Mas este acesso deve ser somente leitura, assim nenhum script PHP conseguiria alterá-los.
+A permissão para arquivo fica assim: rw- r-- --- (veja que não tem permissão nenhuma para "outros")
+A permissão de diretórios fica assim: drwx r-x --- (diretório precisa ter permissão de execução)
+De preferência o servidor FTP deve ser configurado para não permitir que o cliente altere as permissões dos arquivos.
+Caso você precise fazer upload ou outro tipo de escrita, crie uma pasta chamada upload e dê a ela e somente ela a permissão de escrita para o grupo.
+
+Por exemplo, se o seu servidor é o pureFTPd, adicione as seguintes configurações:
+--nochmod # impede o usuário de alterar a permissão dos arquivos
+--umask 137:027 # define a masca de permissão para arquivo:diretório
