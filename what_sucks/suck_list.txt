@@ -1,0 +1,6 @@
+As funções de array não funcionam em iterators
+
+Switch/Case baseado no C
+
+As funções nao seguem padrão de nomenclatura nem ordem de parâmetros.
+Algumas funções de array começam com array_, outras não
