@@ -2,20 +2,16 @@
 
 class Table {
 	public static function select() {
-		$table = get_called_class();
-		$table = strtolower($table);
+    // utilizar static ao inves de self
+		$table = static::TABLE_NAME;
 		return "SELECT * FROM $table";
 	}
 }
 
 class Produtos extends Table {
-	
+	const TABLE_NAME = "produtos";
 }
 
-echo Table::select();
-echo "\n";
 echo Produtos::select();
 
 ?>
-
-
