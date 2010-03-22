@@ -8,7 +8,7 @@ function loop(Traversable $traversable)
 
 $primos = explode(" ", "1 2 3 5 7 11 13 17 19");
 
-// loop($primos);
-loop(new ArrayIterator($primos));
+// loop($primos); // does not work
+loop(new ArrayIterator($primos)); // works
 
 ?>
